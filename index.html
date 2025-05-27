@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CheckLeaf</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'><path fill='%2390ee90' d='M384 0C238.7 0 98.3 70.7 24 192C5.3 221.3-5.3 256 0 288C16 384 112 512 224 512C349.9 512 384 384 384 288V0z'/></svg>">
+    </head>
+
+    <body>
+
+        <button class="helper-button" id="helperBtn" onclick="openSidebar()"><i class="fa-solid fa-leaf"></i></button>
+
+        <div class="sidebar" id="sidebar">
+            <button class="close-button" onclick="closeSidebar()"><i class="fa-solid fa-xmark"></i></button>
+            <h2><i class="fa-solid fa-leaf"></i> Sustentabilidade</h2>
+            <ul>
+                <li>Sustentabilidade é o uso consciente dos recursos naturais.</li>
+                <li>Evita desperdícios e preserva o meio ambiente.</li>
+                <li>Praticar sustentabilidade é garantir um planeta saudável para as próximas gerações.</li>
+                <li>Exemplos de práticas sustentáveis:</li>
+                <li>- Reduzir consumo de plástico.</li>
+                <li>- Economizar água e energia.</li>
+                <li>- Reciclar e reutilizar materiais.</li>
+                <li>- Apoiar o comércio local.</li>
+                <li>- Optar por meios de transporte limpos.</li>
+                <li>- Reduzir o desperdício de alimentos.</li>
+                <li>- Plantar árvores e cuidar de áreas verdes.</li>
+            </ul>
+            <div class="profile-sidebar">
+                <div class="profile-header">
+                    <div class="profile-image"></div>
+                    <h3 class="profile-title">Quem sou eu</h3>
+                </div>
+                <p class="profile-text">
+                    Este projeto foi criado para incentivar hábitos sustentáveis no dia a dia. A ideia é ajudar as pessoas a entenderem como pequenas ações podem gerar um impacto positivo no meio ambiente.
+                </p>
+                <p class="profile-text">
+                    Desenvolvi essa ferramenta porque acredito que a tecnologia pode ser uma aliada na conscientização. De forma simples, o usuário pode acompanhar suas ações e refletir sobre seu papel na preservação do planeta.
+                </p>
+                <p class="profile-text">
+                    Me chamo Leonardo, tenho 24 anos, sou desenvolvedor e apaixonado por tecnologia. Gosto de criar projetos que, além de funcionais, possam gerar algum benefício para a comunidade e para o mundo.
+                </p>
+            </div>
+        </div>
+
+        <div class="container" id="formulario">
+            <h1>Checklist Sustentável</h1>
+
+            <div class="habit">
+                <input type="checkbox" id="habit1">
+                <label for="habit1">Fechei a torneira enquanto escovava os dentes</label>
+            </div>
+            <div class="habit">
+                <input type="checkbox" id="habit2">
+                <label for="habit2">Desliguei as luzes dos ambientes não utilizados</label>
+            </div>
+            <div class="habit">
+                <input type="checkbox" id="habit3">
+                <label for="habit3">Levei sacola reutilizável ao mercado</label>
+            </div>
+            <div class="habit">
+                <input type="checkbox" id="habit4">
+                <label for="habit4">Separei o lixo reciclável</label>
+            </div>
+            <div class="habit">
+                <input type="checkbox" id="habit5">
+                <label for="habit5">Usei transporte coletivo, bicicleta ou fui a pé</label>
+            </div>
+            <div class="habit">
+                <input type="checkbox" id="habit6">
+                <label for="habit6">Reduzi o consumo de plástico descartável</label>
+            </div>
+            <div class="habit">
+                <input type="checkbox" id="habit7">
+                <label for="habit7">Desliguei aparelhos da tomada</label>
+            </div>
+            <div class="habit">
+                <input type="checkbox" id="habit8">
+                <label for="habit8">Evitei desperdício de alimentos</label>
+            </div>
+            <div class="habit">
+                <input type="checkbox" id="habit9">
+                <label for="habit9">Aproveitei a luz natural durante o dia</label>
+            </div>
+
+            <button onclick="calcular()">Ver Meu Impacto</button>
+        </div>
+
+        <div class="loading" id="loading">
+            <i class="fa-solid fa-spinner"></i>
+            <p>Calculando seu impacto...</p>
+        </div>
+
+        <div class="result" id="resultado">
+            <h2><i class="fa-solid fa-earth-americas"></i> Seu Impacto</h2>
+            <p id="textoResultado"></p>
+            <br>
+            <button onclick="voltar()">Voltar para o Checklist</button>
+        </div>
+
+        <script src="./script.js"></script>
+
+    </body>
+</html>
