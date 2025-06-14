@@ -104,7 +104,8 @@
         margin-bottom: 20px;
     }
     .habit {
-        display: flex;
+        display: grid;
+        grid-template-columns: auto 1fr;
         align-items: center;
         margin-bottom: 15px;
     }
